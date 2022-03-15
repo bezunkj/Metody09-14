@@ -16,5 +16,26 @@ namespace Metody12
         {
             InitializeComponent();
         }
+        private bool ObsahujeSlovo(string s, out string longestW, out string shortestW)
+        {
+            char[] splitter = { ' ' };
+            string[] words = s.Split(splitter, StringSplitOptions.RemoveEmptyEntries);
+
+            longestW = words.Max();
+            shortestW = words.Min();
+
+            return (words.Length > 0);
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string x = textBox1.Text;
+            string longest;
+            string shortest;
+            if (ObsahujeSlovo(x, out longest, out shortest))
+            {
+                MessageBox.Show("Retezec obsahuje alespon 1 slovo\nNejdelsi slovo: " + longest + "\nNejkratsi slovo: " + shortest);
+            }
+        }
     }
 }
