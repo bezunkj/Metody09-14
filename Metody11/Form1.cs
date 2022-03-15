@@ -23,12 +23,15 @@ namespace Metody11
             string[] slova = x.Split(separators, StringSplitOptions.RemoveEmptyEntries);
             newString = x;
 
-            for (int i = 0; i < newString.Length; i++)
+            int i = 0;
+            while(i < newString.Length)
             {
                 if (char.IsDigit(newString[i]))
                 {
                     newString = newString.Remove(i, 1);
-                    i--;
+                } else
+                {
+                    i++;
                 }
             }
 
