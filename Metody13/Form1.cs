@@ -55,10 +55,8 @@ namespace Metody13
             if (JeAlfanum(x, out lower, out upper, out nonAlfanum))
             {
                 MessageBox.Show("Retezec obsahuje jen alfanumericke znaky\npocet malych zn.: " + lower + "\npocet velkych zn.: " + upper + "\npocet jinych zn.: " + nonAlfanum);
-            } else
-            {
+            } else {
                 MessageBox.Show("Retezec NEobsahuje jen alfanumericke znaky\npocet malych zn.: " + lower + "\npocet velkych zn.: " + upper + "\npocet jinych zn.: " + nonAlfanum);
-
             }
         }
     }
